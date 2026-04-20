@@ -1,0 +1,628 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Management Carnival '26 | K.R. Mangalam University</title>
+
+<!-- FAVICON - Management briefcase icon -->
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='20' fill='%23070714'/><text y='72' x='50' text-anchor='middle' font-size='65'>💼</text></svg>">
+
+<!-- OG META -->
+<meta property="og:title" content="Management Carnival '26 | K.R. Mangalam University">
+<meta property="og:description" content="The Biggest Management Fest of the Year. Hosted by DSW & Management Society.">
+
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;900&family=Poppins:wght@300;400;500;600&display=swap');
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{
+  --gold:#FFD700;--gold2:#FFA500;--orange:#FF6B35;
+  --dark:#070714;--dark2:#0d0d2b;--card:rgba(255,255,255,0.04);
+  --border:rgba(255,215,0,0.15);--text:rgba(255,255,255,0.75);
+}
+html{scroll-behavior:smooth}
+body{font-family:'Poppins',sans-serif;background:var(--dark);color:#fff;overflow-x:hidden}
+::-webkit-scrollbar{width:6px}
+::-webkit-scrollbar-track{background:#070714}
+::-webkit-scrollbar-thumb{background:linear-gradient(var(--gold),var(--orange));border-radius:10px}
+
+/* ── NAV ── */
+nav{position:fixed;top:0;left:0;right:0;z-index:100;padding:14px 36px;display:flex;align-items:center;justify-content:space-between;backdrop-filter:blur(20px);background:rgba(7,7,20,0.88);border-bottom:1px solid var(--border);transition:all .3s;gap:16px}
+.nav-logo-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+/* LOGO AREA */
+.nav-brand{display:flex;align-items:center;gap:12px;text-decoration:none}
+.nav-logo-img{width:46px;height:46px;border-radius:12px;background:linear-gradient(135deg,rgba(255,215,0,0.15),rgba(255,107,53,0.1));border:1.5px solid rgba(255,215,0,0.35);display:flex;align-items:center;justify-content:center;flex-shrink:0;overflow:hidden;position:relative}
+.nav-logo-img svg{width:28px;height:28px}
+.nav-logo-text{display:flex;flex-direction:column;line-height:1.1}
+.nav-logo-main{font-family:'Montserrat',sans-serif;font-weight:900;font-size:0.95rem;background:linear-gradient(135deg,var(--gold),var(--orange));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+.nav-logo-sub{font-size:0.62rem;color:rgba(255,255,255,0.45);letter-spacing:.5px}
+
+.nav-links{display:flex;gap:24px;list-style:none}
+.nav-links a{color:rgba(255,255,255,0.62);text-decoration:none;font-size:0.82rem;font-weight:500;letter-spacing:.4px;transition:color .3s;position:relative}
+.nav-links a::after{content:'';position:absolute;bottom:-4px;left:0;right:0;height:1.5px;background:var(--gold);transform:scaleX(0);transition:transform .3s}
+.nav-links a:hover{color:var(--gold)}
+.nav-links a:hover::after{transform:scaleX(1)}
+.nav-cta{background:linear-gradient(135deg,var(--gold),var(--orange));color:#000;font-weight:700;font-size:0.8rem;padding:9px 20px;border-radius:50px;text-decoration:none;transition:transform .2s,box-shadow .2s;letter-spacing:.5px;white-space:nowrap}
+.nav-cta:hover{transform:translateY(-2px);box-shadow:0 6px 20px rgba(255,165,0,0.45)}
+
+/* ── HERO ── */
+#heroCanvas{position:absolute;inset:0;z-index:0}
+.hero{position:relative;min-height:100vh;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:130px 20px 90px;overflow:hidden}
+.hero-bg{position:absolute;inset:0;background:radial-gradient(ellipse at 50% 40%,rgba(255,140,0,0.13) 0%,transparent 65%),radial-gradient(ellipse at 80% 80%,rgba(120,0,200,0.1) 0%,transparent 50%),radial-gradient(ellipse at 10% 20%,rgba(255,215,0,0.06) 0%,transparent 50%);z-index:0}
+.hero-content{position:relative;z-index:2}
+
+/* Centre logo in hero */
+.hero-logo-wrap{margin-bottom:28px;animation:fadeDown .7s ease both}
+.hero-logo-circle{width:96px;height:96px;border-radius:24px;background:linear-gradient(135deg,rgba(255,215,0,0.12),rgba(255,107,53,0.1));border:2px solid rgba(255,215,0,0.4);display:flex;align-items:center;justify-content:center;margin:0 auto;box-shadow:0 0 40px rgba(255,165,0,0.2);backdrop-filter:blur(12px);position:relative;overflow:hidden}
+.hero-logo-circle::before{content:'';position:absolute;inset:0;background:linear-gradient(135deg,rgba(255,215,0,0.08),transparent);border-radius:22px}
+.hero-logo-circle svg{width:56px;height:56px;position:relative;z-index:1}
+
+.hosted-tag{display:inline-flex;align-items:center;gap:8px;background:rgba(255,215,0,0.08);border:1px solid rgba(255,215,0,0.3);border-radius:50px;padding:7px 18px;font-size:0.76rem;letter-spacing:1.5px;text-transform:uppercase;color:var(--gold);margin-bottom:24px;animation:fadeDown .8s .1s ease both}
+.main-title{font-family:'Montserrat',sans-serif;font-weight:900;font-size:clamp(3rem,10vw,7rem);line-height:1;background:linear-gradient(135deg,#fff 0%,var(--gold) 40%,var(--orange) 70%,#ff3d3d 100%);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;animation:fadeUp .9s .2s ease both}
+.main-year{font-family:'Montserrat',sans-serif;font-weight:900;font-size:clamp(1.8rem,6vw,4rem);background:linear-gradient(135deg,var(--gold),var(--gold2));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;animation:fadeUp .9s .3s ease both}
+.hero-sub{margin:18px 0 36px;font-size:1rem;color:var(--text);animation:fadeUp .9s .4s ease both;line-height:1.8}
+.info-strip{display:flex;flex-wrap:wrap;justify-content:center;gap:14px;margin-bottom:44px;animation:fadeUp .9s .5s ease both}
+.info-chip{display:flex;align-items:center;gap:8px;background:rgba(255,255,255,0.05);border:1px solid var(--border);border-radius:50px;padding:11px 22px;font-size:0.87rem;backdrop-filter:blur(10px);transition:border-color .3s,background .3s}
+.info-chip:hover{border-color:var(--gold);background:rgba(255,215,0,0.07)}
+.cta-row{display:flex;flex-wrap:wrap;justify-content:center;gap:14px;animation:fadeUp .9s .6s ease both}
+.btn{display:inline-flex;align-items:center;gap:9px;padding:15px 32px;border-radius:50px;font-family:'Montserrat',sans-serif;font-weight:700;font-size:0.9rem;text-decoration:none;transition:transform .25s,box-shadow .25s;cursor:pointer;border:none;letter-spacing:.5px}
+.btn:hover{transform:translateY(-4px)}
+.btn-primary{background:linear-gradient(135deg,var(--gold),var(--orange));color:#000;box-shadow:0 5px 25px rgba(255,165,0,0.4);animation:pulse-glow 2.5s ease-in-out infinite}
+.btn-wa{background:linear-gradient(135deg,#25D366,#128C7E);color:#fff;box-shadow:0 5px 25px rgba(37,211,102,0.3)}
+.btn-outline{background:transparent;color:var(--gold);border:2px solid rgba(255,215,0,0.5)}
+.btn-outline:hover{background:rgba(255,215,0,0.07);border-color:var(--gold)}
+
+/* scroll mouse hint */
+.scroll-hint{position:absolute;bottom:36px;left:50%;transform:translateX(-50%);z-index:2;display:flex;flex-direction:column;align-items:center;gap:6px;animation:fadeUp 1s 1.2s ease both}
+.scroll-hint span{font-size:0.7rem;letter-spacing:2px;color:rgba(255,255,255,0.35);text-transform:uppercase}
+.scroll-mouse{width:22px;height:34px;border:2px solid rgba(255,215,0,0.35);border-radius:12px;display:flex;justify-content:center;padding-top:6px}
+.scroll-dot{width:3px;height:7px;background:var(--gold);border-radius:4px;animation:scrollDot 1.8s ease-in-out infinite}
+@keyframes scrollDot{0%,100%{transform:translateY(0);opacity:1}50%{transform:translateY(8px);opacity:.3}}
+
+/* ── MARQUEE TICKER ── */
+.ticker{background:linear-gradient(135deg,rgba(255,215,0,0.08),rgba(255,107,53,0.08));border-top:1px solid var(--border);border-bottom:1px solid var(--border);padding:13px 0;overflow:hidden;white-space:nowrap}
+.ticker-inner{display:inline-block;animation:ticker 28s linear infinite}
+.ticker-inner span{display:inline-block;padding:0 40px;font-size:0.82rem;font-weight:600;color:var(--gold);letter-spacing:1px}
+.ticker-inner span::before{content:'✦';margin-right:16px;opacity:.5}
+@keyframes ticker{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+
+/* ── COUNTDOWN ── */
+.countdown-section{background:linear-gradient(135deg,rgba(255,165,0,0.07),rgba(120,0,200,0.07));border-bottom:1px solid var(--border);padding:60px 20px;text-align:center}
+.cd-label{font-size:0.75rem;letter-spacing:3px;text-transform:uppercase;color:var(--gold);margin-bottom:32px}
+.cd-boxes{display:flex;justify-content:center;gap:20px;flex-wrap:wrap}
+.cd-box{background:var(--card);border:1px solid var(--border);border-radius:20px;padding:26px 32px;min-width:96px;backdrop-filter:blur(14px);position:relative;overflow:hidden;transition:border-color .3s,transform .3s}
+.cd-box:hover{border-color:var(--gold);transform:translateY(-4px)}
+.cd-box::before{content:'';position:absolute;top:0;left:0;right:0;height:2px;background:linear-gradient(90deg,var(--gold),var(--orange))}
+.cd-num{font-family:'Montserrat',sans-serif;font-weight:900;font-size:3rem;background:linear-gradient(135deg,var(--gold),var(--orange));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;line-height:1}
+.cd-unit{font-size:0.7rem;letter-spacing:2.5px;color:var(--text);margin-top:8px;text-transform:uppercase}
+
+/* ── ABOUT ── */
+.about-section{max-width:960px;margin:0 auto;padding:100px 24px;text-align:center}
+.section-badge{display:inline-block;background:rgba(255,215,0,0.08);border:1px solid var(--border);border-radius:50px;padding:5px 20px;font-size:0.72rem;letter-spacing:2.5px;text-transform:uppercase;color:var(--gold);margin-bottom:18px}
+.section-title{font-family:'Montserrat',sans-serif;font-weight:800;font-size:clamp(1.8rem,5vw,2.8rem);margin-bottom:18px;line-height:1.2}
+.section-title span{background:linear-gradient(135deg,var(--gold),var(--orange));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+.about-text{font-size:0.98rem;color:var(--text);line-height:2;max-width:700px;margin:0 auto 50px}
+.stats-row{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;max-width:640px;margin:0 auto}
+.stat-card{background:var(--card);border:1px solid var(--border);border-radius:22px;padding:32px 20px;transition:transform .3s,border-color .3s;position:relative;overflow:hidden}
+.stat-card::before{content:'';position:absolute;bottom:0;left:0;right:0;height:2px;background:linear-gradient(90deg,var(--gold),var(--orange));transform:scaleX(0);transition:transform .4s}
+.stat-card:hover{transform:translateY(-6px);border-color:var(--gold)}
+.stat-card:hover::before{transform:scaleX(1)}
+.stat-num{font-family:'Montserrat',sans-serif;font-weight:900;font-size:2.2rem;background:linear-gradient(135deg,var(--gold),var(--orange));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+.stat-lbl{font-size:0.8rem;color:var(--text);margin-top:6px}
+
+/* ── HIGHLIGHT STRIP ── */
+.highlight-strip{background:linear-gradient(135deg,rgba(255,215,0,0.06),rgba(255,107,53,0.06));border-top:1px solid var(--border);border-bottom:1px solid var(--border);padding:50px 24px}
+.hl-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:0;max-width:900px;margin:0 auto}
+.hl-item{text-align:center;padding:30px 24px;border-right:1px solid var(--border);position:relative}
+.hl-item:last-child{border-right:none}
+.hl-icon{font-size:2.2rem;margin-bottom:12px}
+.hl-val{font-family:'Montserrat',sans-serif;font-weight:800;font-size:1.4rem;color:var(--gold);margin-bottom:6px}
+.hl-lbl{font-size:0.8rem;color:var(--text)}
+
+/* ── EVENTS ── */
+.events-section{padding:100px 24px;background:linear-gradient(180deg,transparent,rgba(255,165,0,0.03),transparent)}
+.events-section .inner{max-width:1060px;margin:0 auto}
+.events-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(290px,1fr));gap:26px;margin-top:54px}
+.event-card{background:var(--card);border:1px solid var(--border);border-radius:26px;padding:40px 30px;text-align:center;backdrop-filter:blur(16px);position:relative;overflow:hidden;transition:transform .35s,box-shadow .35s,border-color .35s}
+.event-card::before{content:'';position:absolute;inset:0;background:radial-gradient(circle at 50% 0%,rgba(255,215,0,0.09),transparent 60%);opacity:0;transition:opacity .35s}
+.event-card:hover{transform:translateY(-12px);border-color:rgba(255,215,0,0.55);box-shadow:0 24px 70px rgba(0,0,0,0.55)}
+.event-card:hover::before{opacity:1}
+.ev-num{position:absolute;top:18px;right:22px;font-family:'Montserrat',sans-serif;font-weight:900;font-size:3.5rem;color:rgba(255,215,0,0.06);line-height:1}
+.ev-emoji{font-size:3.8rem;margin-bottom:20px;display:block}
+.ev-name{font-family:'Montserrat',sans-serif;font-weight:800;font-size:1.28rem;color:var(--gold);margin-bottom:14px}
+.ev-desc{font-size:0.87rem;color:var(--text);line-height:1.8}
+.ev-tag{display:inline-block;margin-top:20px;background:rgba(255,215,0,0.1);border:1px solid rgba(255,215,0,0.28);border-radius:50px;padding:5px 16px;font-size:0.73rem;color:var(--gold);letter-spacing:.5px}
+
+/* ── HOW IT WORKS ── */
+.hiw-section{padding:100px 24px;max-width:860px;margin:0 auto;text-align:center}
+.hiw-steps{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:0;margin-top:54px;position:relative}
+.hiw-steps::before{content:'';position:absolute;top:36px;left:10%;right:10%;height:2px;background:linear-gradient(90deg,transparent,var(--gold),var(--orange),transparent);z-index:0}
+.hiw-step{position:relative;z-index:1;padding:0 16px;text-align:center}
+.hiw-circle{width:72px;height:72px;border-radius:50%;background:linear-gradient(135deg,rgba(255,215,0,0.12),rgba(255,107,53,0.1));border:2px solid rgba(255,215,0,0.4);display:flex;align-items:center;justify-content:center;margin:0 auto 20px;font-size:1.8rem;transition:transform .3s,border-color .3s}
+.hiw-step:hover .hiw-circle{transform:scale(1.1);border-color:var(--gold)}
+.hiw-step-num{font-family:'Montserrat',sans-serif;font-weight:900;font-size:0.75rem;color:var(--gold);margin-bottom:8px;letter-spacing:2px}
+.hiw-step-title{font-weight:700;font-size:0.95rem;margin-bottom:6px}
+.hiw-step-sub{font-size:0.8rem;color:var(--text);line-height:1.6}
+
+/* ── TIMELINE ── */
+.timeline-section{padding:100px 24px;max-width:820px;margin:0 auto}
+.timeline{position:relative;margin-top:54px}
+.timeline::before{content:'';position:absolute;left:50%;top:0;bottom:0;width:2px;background:linear-gradient(to bottom,transparent,var(--gold),var(--orange),transparent);transform:translateX(-50%)}
+.tl-item{display:flex;align-items:center;margin-bottom:44px;position:relative}
+.tl-item:nth-child(odd){flex-direction:row}
+.tl-item:nth-child(even){flex-direction:row-reverse}
+.tl-content{width:calc(50% - 46px);background:var(--card);border:1px solid var(--border);border-radius:20px;padding:24px 26px;backdrop-filter:blur(14px);transition:border-color .3s,transform .3s}
+.tl-content:hover{border-color:var(--gold);transform:scale(1.03)}
+.tl-dot{position:absolute;left:50%;transform:translateX(-50%);width:18px;height:18px;background:linear-gradient(135deg,var(--gold),var(--orange));border-radius:50%;border:3px solid var(--dark);z-index:1;box-shadow:0 0 14px rgba(255,165,0,0.5)}
+.tl-time{font-family:'Montserrat',sans-serif;font-weight:700;font-size:0.78rem;color:var(--gold);margin-bottom:7px;letter-spacing:1px}
+.tl-title{font-weight:600;font-size:0.94rem;margin-bottom:5px}
+.tl-sub{font-size:0.79rem;color:var(--text)}
+
+/* ── PRIZES ── */
+.prizes-section{padding:100px 24px;text-align:center;background:linear-gradient(135deg,rgba(255,215,0,0.04),rgba(255,107,53,0.04))}
+.prizes-section .inner{max-width:960px;margin:0 auto}
+.prizes-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:22px;margin-top:54px}
+.prize-card{background:var(--card);border:1px solid var(--border);border-radius:24px;padding:36px 22px;text-align:center;position:relative;overflow:hidden;transition:transform .3s,border-color .3s}
+.prize-card:hover{transform:translateY(-10px);border-color:var(--gold)}
+.prize-card.gold-prize{border-color:rgba(255,215,0,0.45);background:linear-gradient(135deg,rgba(255,215,0,0.09),rgba(255,165,0,0.06))}
+.prize-icon{font-size:3.2rem;margin-bottom:16px}
+.prize-title{font-family:'Montserrat',sans-serif;font-weight:800;font-size:1.02rem;color:var(--gold);margin-bottom:10px}
+.prize-desc{font-size:0.82rem;color:var(--text);line-height:1.7}
+
+/* ── SKILLS ── */
+.skills-section{padding:100px 24px;max-width:920px;margin:0 auto;text-align:center}
+.skills-grid{display:flex;flex-wrap:wrap;justify-content:center;gap:14px;margin-top:44px}
+.skill-pill{display:flex;align-items:center;gap:9px;background:var(--card);border:1px solid var(--border);border-radius:50px;padding:13px 26px;font-size:0.87rem;font-weight:500;transition:all .3s}
+.skill-pill:hover{background:rgba(255,215,0,0.09);border-color:var(--gold);transform:translateY(-4px);box-shadow:0 8px 24px rgba(255,165,0,0.15)}
+
+/* ── TESTIMONIAL / QUOTE ── */
+.quote-section{padding:80px 24px;text-align:center;background:linear-gradient(135deg,rgba(120,0,200,0.06),rgba(255,107,53,0.06));border-top:1px solid var(--border);border-bottom:1px solid var(--border)}
+.quote-inner{max-width:720px;margin:0 auto}
+.quote-icon{font-size:4rem;margin-bottom:24px;opacity:.6}
+.quote-text{font-family:'Montserrat',sans-serif;font-weight:700;font-size:clamp(1.1rem,3vw,1.6rem);line-height:1.6;color:#fff;margin-bottom:22px}
+.quote-text em{background:linear-gradient(135deg,var(--gold),var(--orange));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;font-style:normal}
+.quote-author{font-size:0.82rem;color:var(--text);letter-spacing:1px}
+
+/* ── ORGANISERS ── */
+.org-section{padding:100px 24px;text-align:center;max-width:900px;margin:0 auto}
+.org-grid{display:flex;flex-wrap:wrap;justify-content:center;gap:22px;margin-top:50px}
+.org-card{background:var(--card);border:1px solid var(--border);border-radius:20px;padding:28px 22px;width:160px;text-align:center;transition:transform .3s,border-color .3s}
+.org-card:hover{transform:translateY(-6px);border-color:var(--gold)}
+.org-avatar{width:64px;height:64px;border-radius:50%;background:linear-gradient(135deg,rgba(255,215,0,0.15),rgba(255,107,53,0.15));border:2px solid rgba(255,215,0,0.3);display:flex;align-items:center;justify-content:center;margin:0 auto 14px;font-size:1.8rem}
+.org-name{font-weight:700;font-size:0.88rem;margin-bottom:4px}
+.org-role{font-size:0.74rem;color:var(--gold);letter-spacing:.5px}
+
+/* ── VENUE ── */
+.venue-section{padding:100px 24px;max-width:920px;margin:0 auto;text-align:center}
+.venue-card{display:grid;grid-template-columns:1fr 1fr;gap:0;background:var(--card);border:1px solid var(--border);border-radius:26px;overflow:hidden;margin-top:54px;text-align:left}
+.venue-info{padding:44px 38px}
+.venue-info h3{font-family:'Montserrat',sans-serif;font-weight:800;font-size:1.3rem;color:var(--gold);margin-bottom:26px}
+.venue-row{display:flex;gap:14px;align-items:flex-start;margin-bottom:20px}
+.venue-row .vi{font-size:1.3rem;flex-shrink:0;margin-top:2px}
+.venue-row p{font-size:0.87rem;color:var(--text);line-height:1.7}
+.venue-row p strong{color:#fff;display:block;margin-bottom:2px}
+.venue-map{background:linear-gradient(135deg,rgba(255,215,0,0.09),rgba(120,0,200,0.1));display:flex;flex-direction:column;align-items:center;justify-content:center;gap:16px;padding:44px 26px}
+.venue-map .map-icon{font-size:4.5rem}
+.venue-map p{font-size:0.84rem;color:var(--text);text-align:center;line-height:1.7}
+.map-link{display:inline-flex;align-items:center;gap:7px;padding:11px 22px;border-radius:50px;background:linear-gradient(135deg,var(--gold),var(--orange));color:#000;font-weight:700;font-size:0.82rem;text-decoration:none;transition:transform .2s,box-shadow .2s}
+.map-link:hover{transform:scale(1.05);box-shadow:0 6px 20px rgba(255,165,0,0.35)}
+
+/* ── FAQ ── */
+.faq-section{padding:100px 24px;max-width:780px;margin:0 auto}
+.faq-item{background:var(--card);border:1px solid var(--border);border-radius:18px;margin-bottom:14px;overflow:hidden;transition:border-color .3s}
+.faq-item:hover{border-color:rgba(255,215,0,0.35)}
+.faq-q{width:100%;background:none;border:none;color:#fff;font-family:'Poppins',sans-serif;font-size:0.92rem;font-weight:600;padding:22px 26px;text-align:left;cursor:pointer;display:flex;justify-content:space-between;align-items:center;gap:16px}
+.faq-q .arrow{font-size:1rem;transition:transform .3s;flex-shrink:0;color:var(--gold)}
+.faq-a{max-height:0;overflow:hidden;transition:max-height .4s ease}
+.faq-a p{padding:0 26px 22px;font-size:0.86rem;color:var(--text);line-height:1.8}
+.faq-item.open .faq-a{max-height:220px}
+.faq-item.open .arrow{transform:rotate(180deg)}
+.faq-item.open{border-color:rgba(255,215,0,0.4)}
+
+/* ── CTA BANNER ── */
+.cta-banner{margin:0 auto 100px;border-radius:30px;background:linear-gradient(135deg,rgba(255,215,0,0.1),rgba(255,107,53,0.1));border:1px solid var(--border);padding:70px 34px;text-align:center;position:relative;overflow:hidden;max-width:1020px;width:calc(100% - 48px)}
+.cta-banner::before{content:'';position:absolute;top:-70px;right:-70px;width:260px;height:260px;border-radius:50%;background:radial-gradient(circle,rgba(255,165,0,0.18),transparent 70%)}
+.cta-banner::after{content:'';position:absolute;bottom:-70px;left:-70px;width:240px;height:240px;border-radius:50%;background:radial-gradient(circle,rgba(120,0,200,0.14),transparent 70%)}
+.cta-banner h2{font-family:'Montserrat',sans-serif;font-weight:900;font-size:clamp(1.7rem,5vw,2.6rem);margin-bottom:16px}
+.cta-banner p{color:var(--text);font-size:1rem;margin:0 auto 36px;max-width:520px;line-height:1.8}
+
+/* ── FOOTER ── */
+footer{background:rgba(0,0,0,0.45);border-top:1px solid var(--border);padding:60px 24px 32px;text-align:center}
+.footer-brand{display:flex;align-items:center;justify-content:center;gap:14px;margin-bottom:12px}
+.footer-logo-icon{width:44px;height:44px;border-radius:12px;background:linear-gradient(135deg,rgba(255,215,0,0.12),rgba(255,107,53,0.1));border:1.5px solid rgba(255,215,0,0.3);display:flex;align-items:center;justify-content:center;font-size:1.4rem}
+.footer-logo{font-family:'Montserrat',sans-serif;font-weight:900;font-size:1.5rem;background:linear-gradient(135deg,var(--gold),var(--orange));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+.footer-sub{font-size:0.83rem;color:var(--text);margin-bottom:32px}
+.footer-links{display:flex;justify-content:center;gap:22px;flex-wrap:wrap;margin-bottom:34px}
+.footer-links a{color:var(--text);text-decoration:none;font-size:0.82rem;transition:color .3s}
+.footer-links a:hover{color:var(--gold)}
+.footer-divider{width:60px;height:2px;background:linear-gradient(90deg,var(--gold),var(--orange));margin:0 auto 22px;border-radius:2px}
+.footer-copy{font-size:0.76rem;color:rgba(255,255,255,0.28)}
+
+/* ── BACK TO TOP ── */
+.btt{position:fixed;bottom:28px;right:28px;width:48px;height:48px;border-radius:50%;background:linear-gradient(135deg,var(--gold),var(--orange));border:none;color:#000;font-size:1.2rem;cursor:pointer;display:flex;align-items:center;justify-content:center;box-shadow:0 4px 22px rgba(255,165,0,0.45);transition:transform .2s,opacity .3s;opacity:0;pointer-events:none;z-index:200;font-weight:900}
+.btt.show{opacity:1;pointer-events:all}
+.btt:hover{transform:translateY(-4px) scale(1.12)}
+
+/* ── ANIMATIONS ── */
+@keyframes fadeDown{from{opacity:0;transform:translateY(-22px)}to{opacity:1;transform:translateY(0)}}
+@keyframes fadeUp{from{opacity:0;transform:translateY(32px)}to{opacity:1;transform:translateY(0)}}
+@keyframes pulse-glow{0%,100%{box-shadow:0 5px 25px rgba(255,165,0,0.4)}50%{box-shadow:0 5px 50px rgba(255,165,0,0.8)}}
+.reveal{opacity:0;transform:translateY(44px);transition:opacity .75s ease,transform .75s ease}
+.reveal.visible{opacity:1;transform:translateY(0)}
+
+/* ── RESPONSIVE ── */
+@media(max-width:720px){
+  nav{padding:12px 16px}
+  .nav-links{display:none}
+  .nav-logo-sub{display:none}
+  .timeline::before{left:20px}
+  .tl-item,.tl-item:nth-child(even){flex-direction:column;align-items:flex-start;padding-left:50px}
+  .tl-content{width:100%}
+  .tl-dot{left:20px}
+  .venue-card{grid-template-columns:1fr}
+  .stats-row{grid-template-columns:1fr 1fr}
+  .hiw-steps::before{display:none}
+  .hl-item{border-right:none;border-bottom:1px solid var(--border)}
+  .hl-item:last-child{border-bottom:none}
+}
+</style>
+</head>
+<body>
+
+<!-- ═══ NAV ═══ -->
+<nav>
+  <a class="nav-brand" href="#home">
+    <div class="nav-logo-img">
+      <img src="logo.jpeg" />
+      <!-- Management SVG Logo -->
+      
+        <rect x="8" y="22" width="44" height="30" rx="5" fill="url(#g1)" opacity=".9"/>
+        <rect x="20" y="14" width="20" height="10" rx="3" fill="none" stroke="url(#g1)" stroke-width="2.5"/>
+        <line x1="8" y1="35" x2="52" y2="35" stroke="#070714" stroke-width="2.5"/>
+        <circle cx="30" cy="35" r="4" fill="#070714" stroke="url(#g1)" stroke-width="2"/>
+        <defs>
+          <linearGradient id="g1" x1="0" y1="0" x2="60" y2="60" gradientUnits="userSpaceOnUse">
+            <stop stop-color="#FFD700"/>
+            <stop offset="1" stop-color="#FF6B35"/>
+          </linearGradient>
+        </defs>
+      
+    </div>
+    <div class="nav-logo-text">
+      <span class="nav-logo-main">Management Society</span>
+      <span class="nav-logo-sub">K.R. Mangalam University</span>
+    </div>
+  </a>
+  <ul class="nav-links">
+    <li><a href="#about">About</a></li>
+    <li><a href="#events">Events</a></li>
+    <li><a href="#schedule">Schedule</a></li>
+    <li><a href="#prizes">Prizes</a></li>
+    <li><a href="#venue">Venue</a></li>
+    <li><a href="#faq">FAQ</a></li>
+  </ul>
+  <a href="https://forms.gle/EdbUHQYBBYhtvekCA" class="nav-cta" target="_blank">🎟 Register Free</a>
+</nav>
+
+<!-- ═══ HERO ═══ -->
+<section class="hero" id="home">
+  <div class="hero-bg"></div>
+  <canvas id="heroCanvas"></canvas>
+  <div class="hero-content">
+    <div class="hero-logo-wrap">
+      <div class="hero-logo-circle">
+        <svg viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <rect x="10" y="28" width="60" height="40" rx="7" fill="url(#hg)" opacity=".85"/>
+          <rect x="26" y="16" width="28" height="14" rx="4" fill="none" stroke="url(#hg)" stroke-width="3"/>
+          <line x1="10" y1="46" x2="70" y2="46" stroke="#070714" stroke-width="3"/>
+          <circle cx="40" cy="46" r="5.5" fill="#070714" stroke="url(#hg)" stroke-width="2.5"/>
+          <defs>
+            <linearGradient id="hg" x1="0" y1="0" x2="80" y2="80" gradientUnits="userSpaceOnUse">
+              <stop stop-color="#FFD700"/>
+              <stop offset="1" stop-color="#FF6B35"/>
+            </linearGradient>
+          </defs>
+        </svg>
+      </div>
+    </div>
+    <div class="hosted-tag">🏛️ DSW & Management Society · K.R. Mangalam University</div>
+    <div class="main-title">Management</div>
+    <div class="main-year">Carnival '26</div>
+    <p class="hero-sub">Where Creativity Meets Corporate Excellence<br>The Biggest Management Fest of the Year</p>
+    <div class="info-strip">
+      <div class="info-chip"><span>📅</span> 23rd April 2026</div>
+      <div class="info-chip"><span>📍</span> Rooms C415 & C416</div>
+      <div class="info-chip"><span>🕙</span> 10:00 AM Onwards</div>
+      <div class="info-chip"><span>🎓</span> Open for All Students</div>
+    </div>
+    <div class="cta-row">
+      <a href="https://forms.gle/EdbUHQYBBYhtvekCA" class="btn btn-primary" target="_blank">🎟️ Register Now</a>
+      <a href="https://chat.whatsapp.com/GNNYJrsxSi0BPV1esxYkP1" class="btn btn-wa" target="_blank">💬 WhatsApp Group</a>
+      <a href="https://drive.google.com/file/d/17EJSwrRHj4hVVMELF7q6g7KQhX6ZjVJX/view?usp=sharing" class="btn btn-outline" target="_blank">📄 Brochure</a>
+    </div>
+  </div>
+  
+</section>
+
+<!-- ═══ TICKER ═══ -->
+<div class="ticker">
+  <div class="ticker-inner">
+    <span>AD-MAD Show</span><span>Corporate Fashion Walk</span><span>Reel Making</span>
+    <span>23rd April 2026</span><span>K.R. Mangalam University</span><span>Prizes & Certificates</span>
+    <span>Register Now</span><span>Open for All Students</span><span>Rooms C415 & C416</span>
+    <span>AD-MAD Show</span><span>Corporate Fashion Walk</span><span>Reel Making</span>
+    <span>23rd April 2026</span><span>K.R. Mangalam University</span><span>Prizes & Certificates</span>
+    <span>Register Now</span><span>Open for All Students</span><span>Rooms C415 & C416</span>
+  </div>
+</div>
+
+<!-- ═══ COUNTDOWN ═══ -->
+<div class="countdown-section reveal">
+  <div class="cd-label">⏳ Event Starts In</div>
+  <div class="cd-boxes">
+    <div class="cd-box"><div class="cd-num" id="cd-d">00</div><div class="cd-unit">Days</div></div>
+    <div class="cd-box"><div class="cd-num" id="cd-h">00</div><div class="cd-unit">Hours</div></div>
+    <div class="cd-box"><div class="cd-num" id="cd-m">00</div><div class="cd-unit">Minutes</div></div>
+    <div class="cd-box"><div class="cd-num" id="cd-s">00</div><div class="cd-unit">Seconds</div></div>
+  </div>
+</div>
+
+<!-- ═══ HIGHLIGHT STRIP ═══ -->
+<div class="highlight-strip reveal">
+  <div class="hl-grid">
+    <div class="hl-item"><div class="hl-icon">🎭</div><div class="hl-val">3</div><div class="hl-lbl">Competitions</div></div>
+    <div class="hl-item"><div class="hl-icon">🏆</div><div class="hl-val">Cash</div><div class="hl-lbl">Prizes to Win</div></div>
+    <div class="hl-item"><div class="hl-icon">📜</div><div class="hl-val">100%</div><div class="hl-lbl">Cert. for All</div></div>
+    <div class="hl-item"><div class="hl-icon">🎓</div><div class="hl-val">1 Day</div><div class="hl-lbl">Power-Packed</div></div>
+  </div>
+</div>
+
+<!-- ═══ ABOUT ═══ -->
+<section class="about-section reveal" id="about">
+  <div class="section-badge">About the Event</div>
+  <h2 class="section-title">What is <span>Management Carnival?</span></h2>
+  <p class="about-text">Management Carnival '26 is K.R. Mangalam University's premier management fest — a platform where students unleash their creativity, sharpen their corporate skills, and compete for glory. Hosted by the DSW & Management Society, this flagship event brings together the brightest minds for a day of innovation, expression, and excellence. Whether you're a creative thinker, a bold presenter, or a passionate content creator — this is your stage.</p>
+  <div class="stats-row">
+    <div class="stat-card"><div class="stat-num">3</div><div class="stat-lbl">Exciting Events</div></div>
+    <div class="stat-card"><div class="stat-num">🏆</div><div class="stat-lbl">Cash Prizes</div></div>
+    <div class="stat-card"><div class="stat-num">1 Day</div><div class="stat-lbl">Full of Fun</div></div>
+  </div>
+</section>
+
+<!-- ═══ HOW IT WORKS ═══ -->
+<section class="hiw-section reveal">
+  <div class="section-badge">Participation Guide</div>
+  <h2 class="section-title">How to <span>Participate?</span></h2>
+  <div class="hiw-steps">
+    <div class="hiw-step">
+      <div class="hiw-circle">📝</div>
+      <div class="hiw-step-num">STEP 01</div>
+      <div class="hiw-step-title">Register</div>
+      <div class="hiw-step-sub">Fill the Google Form and lock your spot for free.</div>
+    </div>
+    <div class="hiw-step">
+      <div class="hiw-circle">💬</div>
+      <div class="hiw-step-num">STEP 02</div>
+      <div class="hiw-step-title">Join Group</div>
+      <div class="hiw-step-sub">Join the WhatsApp group for all updates & instructions.</div>
+    </div>
+    <div class="hiw-step">
+      <div class="hiw-circle">🎯</div>
+      <div class="hiw-step-num">STEP 03</div>
+      <div class="hiw-step-title">Prepare</div>
+      <div class="hiw-step-sub">Choose your event and prepare your best performance.</div>
+    </div>
+    <div class="hiw-step">
+      <div class="hiw-circle">🏆</div>
+      <div class="hiw-step-num">STEP 04</div>
+      <div class="hiw-step-title">Win Big</div>
+      <div class="hiw-step-sub">Show up, compete, and walk away with prizes & glory!</div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ EVENTS ═══ -->
+<section class="events-section reveal" id="events">
+  <div class="inner">
+    <div style="text-align:center">
+      <div class="section-badge">Competitions</div>
+      <h2 class="section-title">Participate In <span>3 Epic Events</span></h2>
+    </div>
+    <div class="events-grid">
+      <div class="event-card">
+        <div class="ev-num">01</div>
+        <span class="ev-emoji">🎭</span>
+        <div class="ev-name">AD-MAD Show</div>
+        <p class="ev-desc">Think outside the box, craft a compelling ad for a mystery product, and pitch it to the judges. Wit, creativity, and persuasion — all in one stage battle.</p>
+        <span class="ev-tag">Team Event</span>
+      </div>
+      <div class="event-card">
+        <div class="ev-num">02</div>
+        <span class="ev-emoji">👔</span>
+        <div class="ev-name">Corporate Fashion Walk</div>
+        <p class="ev-desc">Step onto the ramp and own the room. Present your most polished corporate avatar — your style, confidence, and presence will be your greatest assets.</p>
+        <span class="ev-tag">Individual Event</span>
+      </div>
+      <div class="event-card">
+        <div class="ev-num">03</div>
+        <span class="ev-emoji">🎬</span>
+        <div class="ev-name">Reel Making</div>
+        <p class="ev-desc">Create. Engage. Influence. Shoot and edit a short reel on a given theme. The most captivating, creative reel wins big recognition and prizes.</p>
+        <span class="ev-tag">Team Event</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ SCHEDULE ═══ -->
+<section class="timeline-section reveal" id="schedule">
+  <div style="text-align:center">
+    <div class="section-badge">Schedule</div>
+    <h2 class="section-title">Event <span>Timeline</span></h2>
+  </div>
+  <div class="timeline">
+    <div class="tl-item"><div class="tl-content"><div class="tl-time">10:00 AM</div><div class="tl-title">🚪 Registrations & Check-In</div><div class="tl-sub">Arrive at C415 & C416, collect your badges and settle in.</div></div><div class="tl-dot"></div></div>
+    <div class="tl-item"><div class="tl-content"><div class="tl-time">10:30 AM</div><div class="tl-title">🎙️ Inauguration Ceremony</div><div class="tl-sub">Opening address by DSW & Management Society heads.</div></div><div class="tl-dot"></div></div>
+    <div class="tl-item"><div class="tl-content"><div class="tl-time">11:00 AM</div><div class="tl-title">🎭 AD-MAD Show Begins</div><div class="tl-sub">Teams present their creative ad campaigns to the panel.</div></div><div class="tl-dot"></div></div>
+    <div class="tl-item"><div class="tl-content"><div class="tl-time">12:30 PM</div><div class="tl-title">👔 Corporate Fashion Walk</div><div class="tl-sub">Hit the ramp and showcase your corporate best.</div></div><div class="tl-dot"></div></div>
+    <div class="tl-item"><div class="tl-content"><div class="tl-time">2:00 PM</div><div class="tl-title">🎬 Reel Making Submission</div><div class="tl-sub">Final reels reviewed and presented to judges.</div></div><div class="tl-dot"></div></div>
+    <div class="tl-item"><div class="tl-content"><div class="tl-time">3:30 PM</div><div class="tl-title">🏆 Prize Distribution & Closing</div><div class="tl-sub">Results, certificates, and prizes awarded to all winners.</div></div><div class="tl-dot"></div></div>
+  </div>
+</section>
+
+<!-- ═══ PRIZES ═══ -->
+<section class="prizes-section reveal" id="prizes">
+  <div class="inner">
+    <div class="section-badge">Rewards</div>
+    <h2 class="section-title">Win Big <span>Prizes & More</span></h2>
+    <div class="prizes-grid">
+      <div class="prize-card gold-prize"><div class="prize-icon">🥇</div><div class="prize-title">Cash Prizes</div><p class="prize-desc">Win exciting cash rewards for your outstanding performance across events.</p></div>
+      <div class="prize-card"><div class="prize-icon">📜</div><div class="prize-title">Certificates</div><p class="prize-desc">Every participant earns a certificate of participation to boost their portfolio.</p></div>
+      <div class="prize-card"><div class="prize-icon">🌟</div><div class="prize-title">Recognition</div><p class="prize-desc">Get featured across university platforms and earn your well-deserved fame.</p></div>
+      <div class="prize-card"><div class="prize-icon">🤝</div><div class="prize-title">Networking</div><p class="prize-desc">Connect with like-minded peers, faculty, and industry mentors.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ SKILLS ═══ -->
+<section class="skills-section reveal">
+  <div class="section-badge">What You Gain</div>
+  <h2 class="section-title">Skills You'll <span>Walk Away With</span></h2>
+  <div class="skills-grid">
+    <div class="skill-pill">🎯 Creative Thinking</div>
+    <div class="skill-pill">🗣️ Public Speaking</div>
+    <div class="skill-pill">💡 Innovation</div>
+    <div class="skill-pill">🎬 Content Creation</div>
+    <div class="skill-pill">👗 Personal Branding</div>
+    <div class="skill-pill">🧠 Strategic Thinking</div>
+    <div class="skill-pill">📊 Presentation Skills</div>
+    <div class="skill-pill">🤝 Teamwork</div>
+    <div class="skill-pill">📱 Social Media Marketing</div>
+    <div class="skill-pill">✨ Confidence Building</div>
+    <div class="skill-pill">🎭 Stage Presence</div>
+    <div class="skill-pill">📝 Persuasive Writing</div>
+  </div>
+</section>
+
+<!-- ═══ INSPIRATIONAL QUOTE ═══ -->
+<div class="quote-section reveal">
+  <div class="quote-inner">
+    <div class="quote-icon">❝</div>
+    <p class="quote-text">Creativity is intelligence having <em>fun</em>. Management is the art of turning <em>ideas into impact</em>. This is your arena.</p>
+    <div class="quote-author">— Management Society, K.R. Mangalam University</div>
+  </div>
+</div>
+
+<!-- ═══ ORGANISERS ═══ -->
+<section class="org-section reveal">
+  <div class="section-badge">Hosted By</div>
+  <h2 class="section-title">Meet the <span>Organisers</span></h2>
+  <div class="org-grid">
+    <div class="org-card"><div class="org-avatar">🏛️</div><div class="org-name">DSW Office</div><div class="org-role">Co-Host</div></div>
+    <div class="org-card"><div class="org-avatar">💼</div><div class="org-name">Mgmt. Society</div><div class="org-role">Primary Host</div></div>
+    <div class="org-card"><div class="org-avatar">🎓</div><div class="org-name">Faculty Team</div><div class="org-role">Mentors</div></div>
+    <div class="org-card"><div class="org-avatar">⭐</div><div class="org-name">Student Council</div><div class="org-role">Coordinators</div></div>
+    <div class="org-card"><div class="org-avatar">🎯</div><div class="org-name">Core Team</div><div class="org-role">Execution</div></div>
+  </div>
+</section>
+
+<!-- ═══ VENUE ═══ -->
+<section class="venue-section reveal" id="venue">
+  <div class="section-badge">Location</div>
+  <h2 class="section-title">Find <span>Us Here</span></h2>
+  <div class="venue-card">
+    <div class="venue-info">
+      <h3>📍 Venue Details</h3>
+      <div class="venue-row"><span class="vi">🏫</span><p><strong>K.R. Mangalam University</strong>Sohna Road, Gurugram, Haryana</p></div>
+      <div class="venue-row"><span class="vi">🚪</span><p><strong>Rooms</strong>C415 & C416</p></div>
+      <div class="venue-row"><span class="vi">📅</span><p><strong>Date</strong>23rd April 2026, Thursday</p></div>
+      <div class="venue-row"><span class="vi">🕙</span><p><strong>Time</strong>10:00 AM Onwards</p></div>
+      <div class="venue-row"><span class="vi">🚇</span><p><strong>Nearest Metro</strong>Sector 55-56, Yellow Line (Rapid Metro)</p></div>
+    </div>
+    <div class="venue-map">
+      <div class="map-icon">🗺️</div>
+      <p>K.R. Mangalam University<br>Sohna Road, Gurugram<br>Haryana, India</p>
+      <a href="https://maps.google.com/?q=K.R.+Mangalam+University+Gurugram" class="map-link" target="_blank">📍 Open in Maps</a>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ FAQ ═══ -->
+<section class="faq-section reveal" id="faq">
+  <div style="text-align:center;margin-bottom:44px">
+    <div class="section-badge">Got Questions?</div>
+    <h2 class="section-title">Frequently Asked <span>Questions</span></h2>
+  </div>
+  <div class="faq-item"><button class="faq-q">Who can participate? <span class="arrow">▼</span></button><div class="faq-a"><p>Management Carnival '26 is open to all students of K.R. Mangalam University. No prior experience needed — just enthusiasm and creativity!</p></div></div>
+  <div class="faq-item"><button class="faq-q">Is there a registration fee? <span class="arrow">▼</span></button><div class="faq-a"><p>Registration is completely free! Just fill out the Google Form and you're in. Limited seats, so register early.</p></div></div>
+  <div class="faq-item"><button class="faq-q">Can I participate in multiple events? <span class="arrow">▼</span></button><div class="faq-a"><p>Yes! Students are encouraged to participate in more than one event. Check individual event rules for team size and eligibility criteria.</p></div></div>
+  <div class="faq-item"><button class="faq-q">Will I get a certificate for participating? <span class="arrow">▼</span></button><div class="faq-a"><p>Absolutely. Every participant will receive a certificate of participation. Winners will receive special merit certificates along with cash prizes.</p></div></div>
+  <div class="faq-item"><button class="faq-q">What should I bring on the day of the event? <span class="arrow">▼</span></button><div class="faq-a"><p>Bring your university ID, your registration confirmation, and most importantly — your energy and enthusiasm! Check the WhatsApp group for any specific props or materials needed for your chosen event.</p></div></div>
+  <div class="faq-item"><button class="faq-q">How do I join the WhatsApp group for updates? <span class="arrow">▼</span></button><div class="faq-a"><p>Click the "Join WhatsApp Group" button anywhere on this page to get all announcements, schedule updates, and last-minute changes directly on your phone.</p></div></div>
+</section>
+
+<!-- ═══ BOTTOM CTA ═══ -->
+<div class="cta-banner reveal">
+  <h2>Ready to Make Your Mark? 🚀</h2>
+  <p>Seats are limited. Register today and be part of the most exciting management event of the year at K.R. Mangalam University. It's free, it's fun, and it could define your year.</p>
+  <div class="cta-row" style="margin-bottom:0">
+    <a href="https://forms.gle/EdbUHQYBBYhtvekCA" class="btn btn-primary" target="_blank">🎟️ Register Now — It's Free</a>
+    <a href="https://chat.whatsapp.com/GNNYJrsxSi0BPV1esxYkP1" class="btn btn-wa" target="_blank">💬 Join WhatsApp Group</a>
+    <a href="https://drive.google.com/file/d/17EJSwrRHj4hVVMELF7q6g7KQhX6ZjVJX/view?usp=sharing" class="btn btn-outline" target="_blank">📄 Download Brochure</a>
+  </div>
+</div>
+
+<!-- ═══ FOOTER ═══ -->
+<footer>
+  <div class="footer-brand">
+    <div class="footer-logo-icon">💼</div>
+    <div class="footer-logo">Management Carnival '26</div>
+  </div>
+  <div class="footer-sub">Hosted by DSW & Management Society · K.R. Mangalam University, Gurugram</div>
+  <div class="footer-links">
+    <a href="#home">Home</a><a href="#about">About</a><a href="#events">Events</a>
+    <a href="#schedule">Schedule</a><a href="#prizes">Prizes</a>
+    <a href="#venue">Venue</a><a href="#faq">FAQ</a>
+    <a href="https://forms.gle/EdbUHQYBBYhtvekCA" target="_blank">Register</a>
+    <a href="https://chat.whatsapp.com/GNNYJrsxSi0BPV1esxYkP1" target="_blank">WhatsApp</a>
+  </div>
+  <div class="footer-divider"></div>
+  <div class="footer-copy">© 2026 Management Society · K.R. Mangalam University · All Rights Reserved</div>
+</footer>
+
+<button class="btt" id="btt" onclick="window.scrollTo({top:0,behavior:'smooth'})">↑</button>
+
+<script>
+// CANVAS
+const canvas=document.getElementById('heroCanvas'),ctx=canvas.getContext('2d');
+let W,H; function resize(){W=canvas.width=canvas.offsetWidth;H=canvas.height=canvas.offsetHeight} resize(); window.addEventListener('resize',resize);
+class P{constructor(){this.reset()}reset(){this.x=Math.random()*W;this.y=Math.random()*H;this.vx=(Math.random()-.5)*.45;this.vy=(Math.random()-.5)*.45;this.r=Math.random()*1.8+.5;this.a=Math.random()*.5+.1}update(){this.x+=this.vx;this.y+=this.vy;if(this.x<0||this.x>W||this.y<0||this.y>H)this.reset()}draw(){ctx.beginPath();ctx.arc(this.x,this.y,this.r,0,Math.PI*2);ctx.fillStyle=`rgba(255,215,0,${this.a})`;ctx.fill()}}
+const parts=[];for(let i=0;i<90;i++)parts.push(new P());
+function drawLines(){for(let i=0;i<parts.length;i++)for(let j=i+1;j<parts.length;j++){const dx=parts[i].x-parts[j].x,dy=parts[i].y-parts[j].y,d=Math.sqrt(dx*dx+dy*dy);if(d<130){ctx.beginPath();ctx.moveTo(parts[i].x,parts[i].y);ctx.lineTo(parts[j].x,parts[j].y);ctx.strokeStyle=`rgba(255,165,0,${.13*(1-d/130)})`;ctx.lineWidth=.7;ctx.stroke()}}}
+function animate(){ctx.clearRect(0,0,W,H);parts.forEach(p=>{p.update();p.draw()});drawLines();requestAnimationFrame(animate)}animate();
+
+// COUNTDOWN
+function tick(){const t=new Date('2026-04-23T10:00:00'),n=new Date(),diff=t-n;if(diff<=0){document.querySelector('.countdown-section').innerHTML='<div class="cd-label" style="font-size:1.4rem;letter-spacing:2px">🎉 The Carnival Has Begun!</div>';return}const d=Math.floor(diff/864e5),h=Math.floor(diff%864e5/36e5),m=Math.floor(diff%36e5/6e4),s=Math.floor(diff%6e4/1e3);document.getElementById('cd-d').textContent=String(d).padStart(2,'0');document.getElementById('cd-h').textContent=String(h).padStart(2,'0');document.getElementById('cd-m').textContent=String(m).padStart(2,'0');document.getElementById('cd-s').textContent=String(s).padStart(2,'0')}tick();setInterval(tick,1000);
+
+// REVEAL
+const obs=new IntersectionObserver(e=>{e.forEach(x=>{if(x.isIntersecting){x.target.classList.add('visible');obs.unobserve(x.target)}})},{threshold:.1});
+document.querySelectorAll('.reveal').forEach(r=>obs.observe(r));
+
+// BACK TO TOP
+const btt=document.getElementById('btt');
+window.addEventListener('scroll',()=>btt.classList.toggle('show',scrollY>500));
+
+// FAQ
+document.querySelectorAll('.faq-q').forEach(btn=>{btn.addEventListener('click',()=>{const item=btn.parentElement,open=item.classList.contains('open');document.querySelectorAll('.faq-item').forEach(i=>i.classList.remove('open'));if(!open)item.classList.add('open')})});
+
+// NAV active underline on scroll
+const sections=document.querySelectorAll('section[id]');
+window.addEventListener('scroll',()=>{let cur='';sections.forEach(s=>{if(scrollY>=s.offsetTop-120)cur=s.id});document.querySelectorAll('.nav-links a').forEach(a=>{a.style.color=a.getAttribute('href')==='#'+cur?'var(--gold)':'rgba(255,255,255,0.62)'})});
+</script>
+</body>
+</html>
